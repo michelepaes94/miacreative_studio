@@ -11,6 +11,26 @@
 
   gtag('config', 'AW-10822310780');
 </script>
+
+  <!-- Event snippet for Contato conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10822310780/YPPECNH1p94cEPy2vago',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -469,7 +489,7 @@
     </nav>
     <div class="header-cta">
       <a href="#planos" class="btn btn-ghost btn-sm">Ver planos</a>
-      <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Falar no WhatsApp</a>
+      <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="return gtag_report_conversion(this.href);">Falar no WhatsApp</a>
     </div>
   </div>
 </header>
@@ -485,7 +505,7 @@
         <h1>Transforme sua imaginação em <em>fotografias</em> incríveis com Inteligência Artificial.</h1>
         <p class="lede">Criamos ensaios fotográficos realistas e exclusivos — sem estúdio, sem fotógrafo, sem sair de casa.</p>
         <div class="hero-actions">
-          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary">Quero meu ensaio</a>
+          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary" onclick="return gtag_report_conversion(this.href);">Quero meu ensaio</a>
           <a href="#galeria" class="btn btn-ghost">Ver exemplos</a>
         </div>
         <div class="hero-trust">
@@ -561,7 +581,7 @@
             <li><svg width="18" height="18"><use href="#ic-check"/></svg> Entrega em até 24h</li>
             <li><svg width="18" height="18"><use href="#ic-check"/></svg> Atendimento direto pelo WhatsApp</li>
           </ul>
-          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary">Quero esse</a>
+          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary" onclick="return gtag_report_conversion(this.href);">Quero esse</a>
         </div>
         <div class="plan-card plan-side">
           <span class="eyebrow">foto avulsa</span>
@@ -654,7 +674,7 @@
       <span class="eyebrow" style="justify-content:center; color:var(--lilac)">comece agora</span>
       <h2>Seu próximo ensaio começa agora.</h2>
       <p>Transforme fotos comuns em imagens extraordinárias com qualidade profissional usando Inteligência Artificial.</p>
-      <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary">
+      <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="btn btn-primary" onclick="return gtag_report_conversion(this.href);">
         <svg width="20" height="20"><use href="#ic-whatsapp"/></svg> Falar no WhatsApp
       </a>
     </div>
@@ -682,7 +702,7 @@
         </div>
         <div class="footer-col">
           <h4>Conecte-se</h4>
-          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/5521971698757" target="_blank" rel="noopener" onclick="return gtag_report_conversion(this.href);">WhatsApp</a>
           <a href="https://www.instagram.com/miacreative_studio/" target="_blank" rel="noopener">Instagram</a>
         </div>
         <div class="footer-col">
@@ -699,7 +719,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp">
+<a href="https://wa.me/5521971698757" target="_blank" rel="noopener" class="wa-float" aria-label="Falar no WhatsApp" onclick="return gtag_report_conversion(this.href);">
   <svg viewBox="0 0 32 32"><use href="#ic-whatsapp"/></svg>
 </a>
 
@@ -738,6 +758,5 @@
 
 </body>
 </html>
-
 
 
